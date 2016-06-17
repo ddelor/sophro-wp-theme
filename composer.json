@@ -1,0 +1,41 @@
+{
+    "name": "opsone/wordpress-theme-kit",
+    "type": "project",
+    "description": "Create empty wordpress theme with minimal developper kit",
+    "homepage": "https://github.com/opsone/wordpress-theme-kit",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/opsone/wordpress-theme-kit/issues",
+        "source": "https://github.com/opsone/wordpress-theme-kit"
+    },
+    "authors": [
+        {
+            "name": "Jeremy Chaufourier",
+            "email": "jeremy@opsone.net",
+            "homepage": "https://github.com/batosai"
+        }
+    ],
+    "require": {
+        "Respect/Validation": "~0.9"
+    },
+    "autoload": {
+        "classmap" : ["modules/controllers"],
+        "files": [
+          "modules/autoload.php"
+        ]
+    },
+    "scripts": {
+      "post-install-cmd": [
+            "php -r \"file_put_contents('style.css', str_replace('#name#', ucfirst(basename(__DIR__)), file_get_contents('style.css')));\"",
+            "php -r \"file_put_contents('bower.json', str_replace('#name#', ucfirst(basename(__DIR__)), file_get_contents('bower.json')));\"",
+            "php -r \"file_put_contents('package.json', str_replace('#name#', ucfirst(basename(__DIR__)), file_get_contents('package.json')));\"",
+            "npm install",
+            "bower install"
+        ],
+      "build": "gulp build",
+      "watch": "gulp serve",
+      "deploy-staging": "gulp deploy-staging",
+      "deploy-preprod": "gulp deploy-preprod",
+      "deploy-prod": "gulp deploy-prod"
+    }
+}
