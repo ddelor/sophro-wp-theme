@@ -2,11 +2,20 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title>Wordpress theme kit</title>
+<title><?php echo get_bloginfo('name'); ?></title>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-    <div id="page">
+<header>
+	<?php
+		if (has_nav_menu('header')) {
+			wp_nav_menu(array(
+				'theme_location' => 'header',
+				'container'      => 'ul'
+			));
+		}
+	?>
+</header>

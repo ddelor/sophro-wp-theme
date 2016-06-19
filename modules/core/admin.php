@@ -2,11 +2,11 @@
 
 function removeDashboardWidgets()
 {
-    // remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
     // remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
     // remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
     // remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
-    // remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
     // remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');
     remove_meta_box('dashboard_primary', 'dashboard', 'side');
     remove_meta_box('dashboard_secondary', 'dashboard', 'side');
@@ -69,9 +69,15 @@ function menuOrder($menu_ord) {
    );
 }
 
+function register_menu() {
+    register_nav_menu('header', __('Header'));
+    register_nav_menu('footer', __('Footer'));
+}
+
 add_action('wp_dashboard_setup', 'removeDashboardWidgets');
 add_action('admin_menu', 'menuPages');
 add_action('admin_menu', 'removeEditorMenu');
 add_action('wp_before_admin_bar_render', 'adminBarRender');
+add_filter('init', 'register_menu');
 add_filter('menu_order', 'menuOrder');
 // custom_menu_order
