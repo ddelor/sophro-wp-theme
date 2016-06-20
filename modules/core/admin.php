@@ -3,11 +3,7 @@
 function removeDashboardWidgets()
 {
     remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
-    // remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
-    // remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
-    // remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
     remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
-    // remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');
     remove_meta_box('dashboard_primary', 'dashboard', 'side');
     remove_meta_box('dashboard_secondary', 'dashboard', 'side');
     remove_meta_box('dashboard_activity', 'dashboard', 'normal');
@@ -37,14 +33,6 @@ function adminBarRender()
     $wp_admin_bar->remove_menu('comments');
     $wp_admin_bar->remove_menu('new-content');
     $wp_admin_bar->remove_menu('wp-logo');
-
-    // $wp_admin_bar->add_menu( array(
-    //     'parent' => false, // use 'false' for a root menu, or pass the ID of the parent menu
-    //     'id' => 'new_media', // link ID, defaults to a sanitized title value
-    //     'title' => "Menu", // link title
-    //     'href' => admin_url( 'nav-menus.php'), // name of file
-    //     'meta' => false // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
-    // ));
 }
 
 function menuOrder($menu_ord) {
