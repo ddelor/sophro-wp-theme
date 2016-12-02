@@ -1,5 +1,5 @@
 {
-  "name": "Sophro",
+  "name": "sophro",
   "version": "1.0.0",
   "description": "opsone/wordpress-theme-kit =====",
   "main": "gulpfile.js",
@@ -21,5 +21,27 @@
     "start": "gulp"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rsync": "^0.0.5",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.8",
+    "jshint": "^2.9.2",
+    "wrench": "^1.5.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddelor/sophro-wp-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ddelor/sophro-wp-theme/issues"
+  },
+  "homepage": "https://github.com/ddelor/sophro-wp-theme#readme"
 }

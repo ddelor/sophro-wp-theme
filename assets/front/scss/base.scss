@@ -1,0 +1,124 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                  VARIABLES                  O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+$white:          #fff;
+$black:          #000;
+$brown_dark:     #2a211c;
+$brown_light:    #bd825f;
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                    GLOBAL                   O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, button, cite, code, del, dfn, em, font, form, img, input, textarea, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, footer {
+    display:block;
+}
+
+html,
+body {
+    height:100%;
+}
+
+body {
+    background:#fff;
+    display:table;
+    width:100%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: $black;
+}
+
+a {
+    text-decoration:none;
+}
+
+a img {
+    border:none;
+}
+
+.lineclear {
+    clear:both;
+    line-height:0;
+    height:0;
+    font-size:0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                   CONTAINER                 O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.container {
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                    HEADER                   O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+header {
+
+    .top {
+        padding: 35px 0 50px 0;
+
+        .logo {
+            width: 174px;
+            color: $brown_dark;
+            text-align: center;
+
+            .name {
+                font-size: 29px;
+                letter-spacing: .1px;
+            }
+
+            .job {
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 23px;
+                letter-spacing: 0.2px;
+            }
+
+            .city {
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: .4px;
+                padding-bottom: 6px;
+                border-bottom: 1px solid $brown_light;
+            }
+
+            .phone {
+                font-weight: 700;
+                font-size: 29px;
+            }
+        }
+    }
+
+    .menu {}
+}
+
+
+
+
+
+
+
+
+
+
+
