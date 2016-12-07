@@ -4,7 +4,34 @@ get_header();
 ?>
 
 <!-- START SLIDER -->
-<section class="home-slider">home-slider</section>
+<section class="full home-slider">
+    <ul id="home-slider">
+        <li>
+            <a href="#">
+                <div class="img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/front/images/img-02.jpg');"></div>
+                <div class="infos">
+                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/front/images/img-01.jpg');"></div>
+                <div class="infos">
+                    <p class="title">Lorem ipsum dolor sit amet</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/front/images/img-03.jpg');"></div>
+                <div class="infos">
+                    <p class="title">Consectetur adipiscing elit</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
 <!-- END SLIDER -->
 
 <!-- START LIST POSTS -->

@@ -57,9 +57,16 @@ a img {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*         o°        o°        o°                                         °o        °o        °o         */
-/*        O         O         O                   CONTAINER                 O         O         O        */
+/*        O         O         O                   CONTAINERS                 O         O         O        */
 /* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.full {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 .container {
     position: relative;
@@ -101,7 +108,7 @@ nav.menu {
 header {
 
     .top {
-        padding: 35px 0 50px 0;
+        padding: 25px 0 50px 0;
 
         .logo {
             width: 174px;
@@ -141,6 +148,63 @@ header {
         a {
             font-size: 22px;
         }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                 HOME SLIDER                 O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.home-slider {
+    margin-bottom: 60px;
+
+    #home-slider {
+        height: 390px;
+        width: 100%;
+
+        li {
+            height: 100%;
+            width: 100%;
+
+            a {
+                position: relative;
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
+            .img {
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .infos {
+                position: absolute;
+                left: 0; bottom: 0; right: 0;
+                background: $white_muted;
+                padding: 20px;
+
+                .title {
+                    color: $brown_dark;
+                    font-size: 24px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.lSSlideOuter .lSPager.lSpg > li {
+
+    a {
+        background-color: $brown_dark;
+    }
+
+    &.active a, &:hover a {
+        background-color: $brown_light;
     }
 }
 
