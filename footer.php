@@ -1,14 +1,16 @@
 <footer>
-    <nav>
-        <?php
-            if (has_nav_menu('footer')) {
-                wp_nav_menu(array(
-                    'theme_location' => 'footer',
-                    'container'      => 'ul'
-                ));
-            }
-        ?>
-    </nav>
+    <div class="container">
+        <nav class="menu">
+            <?php
+                if (has_nav_menu('footer')) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'footer',
+                        'container'      => 'ul'
+                    ));
+                }
+            ?>
+        </nav>
+    </div>
     <?php
         $address_1 = of_get_option('so_address_1');
         $address_2 = of_get_option('so_address_2');

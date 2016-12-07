@@ -5,6 +5,7 @@
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 
 $white:          #fff;
+$white_muted:    rgba(255, 255, 255, .6);
 $black:          #000;
 $brown_dark:     #2a211c;
 $brown_light:    #bd825f;
@@ -68,6 +69,31 @@ a img {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                    MENUS                   O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+nav.menu {
+    list-style: none;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 30px;
+        box-sizing: border-box;
+        border-right: 1px solid $brown_light;
+
+        &:last-child { border-right: 0; }
+    }
+
+    a {
+        color: $brown_dark;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
 /*        O         O         O                    HEADER                   O         O         O        */
 /* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
@@ -109,9 +135,107 @@ header {
         }
     }
 
-    .menu {}
+    nav.menu {
+        margin-bottom: 30px;
+
+        a {
+            font-size: 22px;
+        }
+    }
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                    TITLES                   O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+h1 {
+    color: $brown_dark;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                    LISTS                    O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.list {
+
+    ul {
+        list-style: none;
+    }
+
+    .item {
+        float: left;
+        width: 321px;
+        height: 321px;
+        padding: 0 10px;
+        margin-bottom: 20px;
+
+        a {
+            position: relative;
+            display: block;
+            height: 100%;
+        }
+
+        .img {
+            display: block;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .infos {
+            position: absolute;
+            left: 0; bottom: 0; right: 0;
+            background: $white_muted;
+            padding: 20px;
+
+            .title {
+                color: $brown_dark;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .more-link {
+        margin: 30px 0 70px 0;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            background: $brown_light;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 20px;
+            padding: 15px 20px;
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                    FOOTER                   O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+footer {
+
+    nav.menu {
+        margin: 30px 0;
+        padding: 16px 0;
+        border-top: 1px solid $brown_light;
+        border-bottom: 1px solid $brown_light;
+
+        a {
+            font-size: 16px;
+        }
+    }
+}
 
 
 
