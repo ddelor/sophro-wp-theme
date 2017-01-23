@@ -1,5 +1,14 @@
 <?php
 
+function initController($controller_name)
+{
+    $controller = new $controller_name();
+    $vars = $controller->init();
+    foreach ($vars as $key => $value) {
+        $GLOBALS[$key] = $value;
+    }
+}
+
 function loadController($template)
 {
     global $view;

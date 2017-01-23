@@ -1,10 +1,10 @@
 <?php
 
-namespace Controller;
+namespace Home;
 
 use Controller\Base;
 
-class TemplatePageHomeController extends Base
+class HomeController extends Base
 {
     protected function get(){
       return array();

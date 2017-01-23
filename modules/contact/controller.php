@@ -1,11 +1,11 @@
 <?php
 
-namespace Controller;
+namespace Contact;
 
 use Controller\Base;
 use Contact\ContactValidator;
 
-class TemplatePageContactController extends Base
+class ContactController extends Base
 {
     protected function get()
     {

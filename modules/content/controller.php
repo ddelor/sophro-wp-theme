@@ -1,10 +1,10 @@
 <?php
 
-namespace Controller;
+namespace Content;
 
 use Controller\Base;
 
-class TemplatePageContentController extends Base
+class ContentController extends Base
 {
     protected function get(){
       return array();
