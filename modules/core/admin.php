@@ -17,13 +17,7 @@ function removeEditorMenu()
 function menuPages()
 {
     remove_menu_page('edit-comments.php');
-    // remove_menu_page('plugins.php');
-
-    // remove_menu_page('index.php');
-    // remove_menu_page('themes.php');
-    // remove_menu_page('edit.php');
-    // remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );   // Remove posts->tags submenu
-    // remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' );   // Remove posts->categories submenu
+    remove_menu_page('edit.php');
 }
 
 function adminBarRender()
@@ -41,9 +35,9 @@ function menuOrder($menu_ord) {
    return array(
        'index.php', // Dashboard
        'separator1', // First separator
-       'edit.php?post_type=custom', // Pages
        'edit.php?post_type=page', // Pages
-       'edit.php', // Posts
+       'edit.php?post_type=chronic',
+       'edit.php?post_type=testimonial',
        'link-manager.php', // Links
        'upload.php', // Media
        'edit-comments.php', // Comments
@@ -62,6 +56,11 @@ function register_menu() {
     register_nav_menu('footer', __('Footer'));
 }
 
+function removePagesSupports()
+{
+    remove_post_type_support('page', 'revisions');
+}
+
 add_action('wp_dashboard_setup', 'removeDashboardWidgets');
 add_action('admin_menu', 'menuPages');
 add_action('admin_menu', 'removeEditorMenu');
@@ -69,3 +68,4 @@ add_action('wp_before_admin_bar_render', 'adminBarRender');
 add_filter('init', 'register_menu');
 add_filter('menu_order', 'menuOrder');
 add_filter('custom_menu_order', 'menuOrder');
+add_action('init', 'removePagesSupports');
