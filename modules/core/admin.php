@@ -41,10 +41,10 @@ function menuOrder($menu_ord) {
    return array(
        'index.php', // Dashboard
        'separator1', // First separator
-       'edit.php', // Posts
        'edit.php?post_type=custom', // Pages
-       'link-manager.php', // Links
        'edit.php?post_type=page', // Pages
+       'edit.php', // Posts
+       'link-manager.php', // Links
        'upload.php', // Media
        'edit-comments.php', // Comments
        'separator2', // Second separator
@@ -68,4 +68,4 @@ add_action('admin_menu', 'removeEditorMenu');
 add_action('wp_before_admin_bar_render', 'adminBarRender');
 add_filter('init', 'register_menu');
 add_filter('menu_order', 'menuOrder');
-// custom_menu_order
+add_filter('custom_menu_order', 'menuOrder');

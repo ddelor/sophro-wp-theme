@@ -7,8 +7,12 @@ use Contact\ContactValidator;
 
 class TemplatePageContactController extends Base
 {
-    protected function get(){
-      return array();
+    protected function get()
+    {
+        global $post;
+
+        get_main_image($post);
+        return array();
     }
 
     protected function post(){
@@ -32,9 +36,12 @@ class TemplatePageContactController extends Base
             $headers   = array('Content-Type: text/html; charset=UTF-8');
             $headers[] = 'From: '.$_POST['user'].' <' . $_POST['email'] . '>' . "\r\n";
 
+            // CONTACT EMAIL
+            $contact_email = of_get_option('so_email');
+
             // SEND EMAIL
             wp_mail(
-                get_bloginfo('admin_email'), //Email
+                $contact_email, //Email
                 "Demande de contact", //Sujet
                 $content, //Message
                 $headers

@@ -7,7 +7,7 @@ function registerPagesMetaBoxes( $meta_boxes )
     $meta_boxes[] = array(
         'id'       => 'page_content',
         'title'    => 'Médias',
-        'pages'    => array('page'),
+        'pages'    => array('page', 'post'),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,

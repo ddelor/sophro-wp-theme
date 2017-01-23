@@ -17,7 +17,10 @@
                 <p class="name">Véronique Finat</p>
                 <p class="job">Sophrologue</p>
                 <p class="city">à Fontenay-Sous-Bois</p>
-                <p class="phone">06 22 21 26 81</p>
+                <?php $tel = of_get_option('so_tel'); ?>
+                <?php if (!empty($tel)): ?>
+                    <p class="phone">06 22 21 26 81</p>
+                <?php endif ?>
             </div>
         </div>
         <nav class="menu">
