@@ -11,23 +11,26 @@ class ContactController extends Base
     {
         global $post;
 
-        get_main_image($post);
+        // get_main_image($post);
         return array();
     }
 
-    protected function post(){
+    protected function post()
+    {
 
         var_dump($_POST);
 
-        $error     = false;
+        $error     = array();
         $success   = false;
         $base_path = dirname(realpath(__FILE__));
 
         $contact   = new ContactValidator($_POST);
 
         if($contact->isValid()){
+            $success   = true;
+
             // CREATE EMAIL CONTENT
-            $content   = file_get_contents($base_path .'/../form-contact/contact.html');
+            $content   = file_get_contents($base_path .'/../contact/_contact.html');
             $content   = str_replace('{message}', $_POST['message'], $content);
             $content   = str_replace('{user}', $_POST['user'], $content);
             $content   = str_replace('{email}', $_POST['email'], $content);
@@ -50,10 +53,10 @@ class ContactController extends Base
             // CLEAN FORM
             $_POST = array();
         }
-        $error = $contact->getErrors();
+        $errors = $contact->getErrors();
 
         return array(
-            'error'   => $error,
+            'errors'  => $errors,
             'success' => $success,
         );
     }

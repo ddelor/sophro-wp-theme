@@ -300,6 +300,11 @@ h1 {
     .form {
         margin-bottom: 100px;
 
+        .errors {
+            color: red;
+            font-size: 16px;
+        }
+
         div {
             margin-bottom: 15px;
             width: 460px;
@@ -321,7 +326,7 @@ h1 {
         }
 
         input[type=text], textarea {
-            width: calc(100% - 74px);
+            width: calc(100% - 64px);
             padding: 5px;
             font-weight: 600;
             background-color: $brown_light;

@@ -33,25 +33,29 @@ get_header();
 
         <div class="form">
             <?php if (!empty($errors)): ?>
-                <div class="errors"></div>
+                <div class="errors">
+                    <?php foreach ($errors as $key => $error): ?>
+                        <p><?php echo $error; ?></p> 
+                    <?php endforeach ?>
+                </div>
             <?php endif ?>
 
-            <?php if (!empty($success)): ?>
+            <?php if (isset($success) and $success): ?>
                 <div class="success">Merci, votre demande a bien été envoyée.</div>
             <?php endif ?>
 
             <form method="POST">
                 <div>
                     <label for="user">Nom*</label>
-                    <input type="text" name="user">
+                    <input type="text" name="user" value="<?php if(!empty($_POST['user'])){ echo $_POST['user']; } ?>">
                 </div>
                 <div>
                     <label for="name">Email*</label>
-                    <input type="text" name="email">
+                    <input type="text" name="email" value="<?php if(!empty($_POST['email'])){ echo $_POST['email']; } ?>">
                 </div>
                 <div>
                     <label for="name">Message*</label>
-                    <textarea name="message"></textarea>
+                    <textarea name="message"><?php if(!empty($_POST['message'])){ echo $_POST['message']; } ?></textarea>
                 </div>
                 <div>
                     <input type="submit" value="Envoyer">

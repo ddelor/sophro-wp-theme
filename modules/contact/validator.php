@@ -2,10 +2,10 @@
 
 namespace Contact;
 
-use Form\Form;
 use Respect\Validation\Validator as v;
+use Form\Form;
 
-class ContactValidator
+class ContactValidator extends Form
 {
 
     public function __construct($data) {
@@ -24,7 +24,7 @@ class ContactValidator
             'validators' => function($value) {
               return v::email()->validate($value);
             },
-            'errors'     => array('L\'email est non valide'),
+            'errors'     => array('L\'email est non valide.'),
           ),
           'message' => array(
             'value'      => $this->data['message'],
