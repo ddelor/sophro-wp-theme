@@ -10,7 +10,8 @@ jQuery(document).ready(function($) {
 					auto:true,
 					pauseOnHover:true,
 					slideMargin:0,
-					speed:1200
+					speed:1200,
+					pause:4000
 				});
 			} 
 		},

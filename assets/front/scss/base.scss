@@ -8,6 +8,7 @@ $white:          #fff;
 $white_muted:    rgba(255, 255, 255, .6);
 $black:          #000;
 $brown_dark:     #2a211c;
+$brown_medium:   #6b4f3f;
 $brown_light:    #bd825f;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -32,7 +33,6 @@ body {
 
 body {
     background:#fff;
-    display:table;
     width:100%;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
@@ -95,7 +95,7 @@ nav.menu {
     }
 
     a {
-        color: $brown_dark;
+        color: $brown_medium;
     }
 }
 
@@ -112,7 +112,7 @@ header {
 
         .logo {
             width: 174px;
-            color: $brown_dark;
+            color: $brown_medium;
             text-align: center;
 
             .name {
@@ -200,7 +200,7 @@ header {
 .lSSlideOuter .lSPager.lSpg > li {
 
     a {
-        background-color: $brown_dark;
+        background-color: $brown_medium;
     }
 
     &.active a, &:hover a {
@@ -215,7 +215,7 @@ header {
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
 
 h1 {
-    color: $brown_dark;
+    color: $brown_medium;
     text-transform: uppercase;
     font-size: 35px;
     margin-bottom: 30px;
@@ -325,7 +325,7 @@ h1 {
             padding: 5px;
             font-weight: 600;
             background-color: $brown_light;
-            color: $brown_dark;
+            color: $brown_medium;
         }
 
         textarea {
@@ -333,7 +333,7 @@ h1 {
         }
 
         input[type=submit] {
-            background-color: $brown_dark;
+            background-color: $brown_medium;
             color: $white;
             padding: 5px;
             text-transform: uppercase;
@@ -377,11 +377,13 @@ footer {
                 width: 30px;
                 height: 30px;
                 border-radius: 15px;
-                background: $brown_dark url(../images/icons-social.png) no-repeat;
+                background: $brown_medium url(../images/facebook-logo.svg) no-repeat;
+                background-size: 15px auto;
+                background-position: center;
 
-                &.facebook { background-position: 0 0; }
-                &.twitter { background-position: -30px 0; }
-                &.linkedin { background-position: -60px 0; }
+                &.facebook { background-image: url(../images/facebook-logo.svg); }
+                &.twitter { background-image: url(../images/twitter-logo-silhouette.svg); }
+                &.linkedin { background-image: url(../images/linkedin-logo.svg); }
             }
         }
     }
