@@ -1,13 +1,13 @@
 <?php 
 
-function registerPagesMetaBoxes( $meta_boxes )
+function register_content_metaBoxes( $meta_boxes )
 {
     global $post;
 
     $meta_boxes[] = array(
         'id'       => 'page_content',
         'title'    => 'Médias',
-        'pages'    => array('page', 'post'),
+        'pages'    => array('page', 'chronic'),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
@@ -31,4 +31,4 @@ function registerPagesMetaBoxes( $meta_boxes )
     return $meta_boxes;
 }
 
-add_filter('rwmb_meta_boxes', 'registerPagesMetaBoxes');
+add_filter('rwmb_meta_boxes', 'register_content_metaBoxes');

@@ -283,6 +283,82 @@ h1 {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*         o°        o°        o°                                         °o        °o        °o         */
+/*        O         O         O                   CONTENT                   O         O         O        */
+/* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
+/* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
+
+.content {
+    padding-bottom: 70px;
+
+    .img-main {
+        height: 390px;
+        margin: -15px 0 50px 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    blockquote {
+        position: relative;
+        margin: 0 0 50px 0;
+        padding: 0 50px;
+        text-align: justify;
+        font-size: 23px;
+        font-weight: 600;
+        color: $brown_light;
+
+        &:before,
+        &:after {
+            display: block;
+            position: absolute;
+            font-weight: 700;
+            font-size: 65px;
+            opacity: .5;
+        }
+
+        &:before {
+            content: "\00ab";
+            top: -30px; left: 0;
+        }
+
+        &:after {
+            content: "\00bb";
+            bottom: -15px; right: 0;
+        }
+    }
+
+    article {
+
+        p, ul {
+            margin-bottom: 20px;
+            font-size: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        em, i {
+            font-style: italic;
+        }
+
+        a {
+            font-weight: 600;
+            color: $brown_light;
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 35px;
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*         o°        o°        o°                                         °o        °o        °o         */
 /*        O         O         O                   CONTACT                   O         O         O        */
 /* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
 /* _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
