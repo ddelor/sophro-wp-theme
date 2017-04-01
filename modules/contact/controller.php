@@ -17,9 +17,6 @@ class ContactController extends Base
 
     protected function post()
     {
-
-        var_dump($_POST);
-
         $error     = array();
         $success   = false;
         $base_path = dirname(realpath(__FILE__));

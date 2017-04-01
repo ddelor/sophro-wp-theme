@@ -17,7 +17,7 @@
 
 		<?php if ($quote): ?>
 			<blockquote>
-				<?php echo $quote; ?>
+				<?php echo nl2br($quote); ?>
 			</blockquote>
 		<?php endif ?>
 
