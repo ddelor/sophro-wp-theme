@@ -3,5 +3,8 @@
 /node_modules/
 /bower_components/
 /composer.phar
+/.htaccess
+/.htpasswd
+/robots.txt
 
 .DS_Store

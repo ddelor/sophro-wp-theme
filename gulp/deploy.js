@@ -10,6 +10,7 @@ var gulp          = require('gulp'),
         '.gitmodules',
         'gulpfile.js',
         'package.json',
+        'bower.json',
         'node_modules',
         '*.log'
     ],
@@ -28,32 +29,21 @@ var gulp          = require('gulp'),
         '/wp-content/themes/**'
     ],
     excludeTheme = [
-        'scss',
-        'js'
+         'gulp',
+         'scss',
+         'assets/**/js'
     ],
-    staging = {
-      'hostname': 'hostname',
-      'sshUser': 'username',
-      'sshRootDir': '/path/to/root',
-      'sshThemeDir': '/subpath/to/theme',
-      'ddbRemoteName': 'database_name_remote',
-      'ddbRemoteUser': 'database_username',
-      'ddbRemotePassword': 'database_password',
-      'ddbLocalName': 'database_name_local',
-      'remoteURI': 'foo.domain.fr',
-      'localURI': 'local.foo.domain.fr'
-    },
     prod = {
-      'hostname': 'hostname',
-      'sshUser': 'username',
-      'sshRootDir': '/path/to/root',
-      'sshThemeDir': '/subpath/to/theme',
-      'ddbRemoteName': 'database_name_remote',
-      'ddbRemoteUser': 'database_username',
-      'ddbRemotePassword': 'database_password',
-      'ddbLocalName': 'database_name_local',
-      'remoteURI': 'foo.domain.fr',
-      'localURI': 'local.foo.domain.fr'
+      'hostname': 'veroniquefinat-sophrologie.com',
+      'sshUser': 'veroniquej',
+      'sshRootDir': '/home/veroniquej/www',
+      'sshThemeDir': '/wp-content/themes/sophro-wp-theme',
+      'ddbRemoteName': 'veroniquej415',
+      'ddbRemoteUser': 'veroniquej415',
+      'ddbRemotePassword': '',
+      'ddbLocalName': 'sophro',
+      'remoteURI': 'veroniquefinat-sophrologie.com',
+      'localURI': 'localhost/sophro'
     },
     execLog = function (error, stdout, stderr) {
       console.log('stdout: ' + stdout);
@@ -62,24 +52,6 @@ var gulp          = require('gulp'),
           console.log('exec error: ' + error);
       }
     };
-
-gulp.task('deploy-staging', [], function(){
-  return gulp.src('./')
-    .pipe(rsync({
-      root: './',
-      hostname: staging.hostname,
-      username: staging.sshUser,
-      destination: staging.sshRootDir+staging.sshThemeDir,
-      recursive: true,
-      emptyDirectories: true,
-      incremental: true,
-      progress: true,
-      silent:false,
-      clean: true,
-      exclude: excludeGlobal.concat(excludeTheme)
-    }))
-  ;
-});
 
 gulp.task('deploy-prod', [], function(){
   return gulp.src('./')
@@ -99,22 +71,6 @@ gulp.task('deploy-prod', [], function(){
   ;
 });
 
-gulp.task('deploy-core-staging', [], function(){
-    return gulp.src('./../../../')
-      .pipe(rsync({
-        root: './../../../',
-        hostname: staging.hostname,
-        username: staging.sshUser,
-        destination: staging.sshRootDir,
-        recursive: true,
-        emptyDirectories: true,
-        incremental: true,
-        progress: true,
-        clean: true,
-        exclude: excludeGlobal.concat(excludeCore)
-    }));
-});
-
 gulp.task('deploy-core-prod', [], function(){
     return gulp.src('./../../../')
       .pipe(rsync({
@@ -129,12 +85,6 @@ gulp.task('deploy-core-prod', [], function(){
         clean: true,
         exclude: excludeGlobal.concat(excludeCore)
       }));
-});
-
-gulp.task('pull-core-staging', [], function () {
-    execSync('ssh '+staging.sshUser+'@'+staging.hostname+' "mysqldump -u '+staging.ddbRemoteUser+' -p\''+staging.ddbRemotePassword+'#\' '+staging.ddbRemoteName+'" | mysql -u root '+staging.ddbLocalName, execLog);
-    execSync('wp search-replace "//'+staging.remoteURI+'" "//'+staging.localURI+'"', execLog);
-    execSync('wp cache flush', execLog);
 });
 
 gulp.task('pull-core-prod', [], function () {
