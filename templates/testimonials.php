@@ -13,11 +13,12 @@ $arg = array(
 $testimonials = get_posts($arg);
 ?>
 
+<?php include 'partials/section-content.php'; ?>
+
 <!-- START LIST POSTS -->
 <?php if (!empty($testimonials)): ?>
     <section class="list list--testimonials">
         <div class="container">
-        	<h1><?php echo $post->post_title; ?></h1>
             <ul>
                 <?php foreach ($testimonials as $testimonial): ?>
                     <li class="item">
