@@ -57,9 +57,11 @@ get_header();
                     <label for="name">Message*</label>
                     <textarea name="message"><?php if(!empty($_POST['message'])){ echo $_POST['message']; } ?></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_KEY; ?>"></div>
                 <div>
                     <input type="submit" value="Envoyer">
                 </div>
+                <p>*Mentions obligatoires.</p>
             </form>
         </div>
     </div>

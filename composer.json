@@ -16,7 +16,8 @@
         }
     ],
     "require": {
-        "Respect/Validation": "~0.9"
+        "Respect/Validation": "~0.9",
+        "google/recaptcha": "~1.1"
     },
     "autoload": {
         "classmap" : ["modules/controllers"],
