@@ -15,9 +15,7 @@
         <div class="top">
             <div class="logo">
                 <a href="<?php echo home_url(); ?>">
-                    <p class="name">Véronique Finat</p>
-                    <p class="job">Sophrologue</p>
-                    <p class="city">à Fontenay-Sous-Bois</p>
+                    <p class="name">Véronique Finat <strong>Sophrologue</strong> à Fontenay-Sous-Bois</p>
                 </a>
                 <?php $tel = of_get_option('so_tel'); ?>
                 <?php if (!empty($tel)): ?>

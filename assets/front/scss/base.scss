@@ -1,4 +1,4 @@
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*         o°        o°        o°                                         °o        °o        °o         */
 /*        O         O         O                  VARIABLES                  O         O         O        */
 /* ><(((°>   ><(((°>   ><(((°>                                               <°)))><   <°)))><   <°)))>< */
@@ -87,7 +87,7 @@ nav.menu {
     li {
         display: inline-block;
         vertical-align: middle;
-        padding: 0 30px;
+        padding: 0 15px;
         box-sizing: border-box;
         border-right: 1px solid $brown_light;
 
@@ -108,17 +108,24 @@ nav.menu {
 header {
 
     .top {
-        padding: 25px 0 50px 0;
+        padding: 15px 0 30px 0;
 
         .logo {
-            width: 174px;
+            width: auto;
             text-align: center;
+            border-bottom: 1px solid $brown_light;
+            padding-bottom: 10px;
             
             a { color: $brown_medium; }
 
             .name {
                 font-size: 29px;
                 letter-spacing: .1px;
+
+                strong {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
             }
 
             .job {
@@ -140,6 +147,7 @@ header {
                 font-weight: 700;
                 font-size: 29px;
                 color: $brown_medium;
+                margin-top: 5px;
             }
         }
     }

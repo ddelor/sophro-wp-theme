@@ -9,7 +9,9 @@
 <section class="content">
 	<div class="container">
 
-		<h1><?php echo $post->post_title; ?></h1>
+		<?php if (!is_front_page()): ?>
+			<h1><?php echo $post->post_title; ?></h1>
+		<?php endif ?>
 		
 		<?php if ($img): ?>
 			<div class="img-main" style="background-image: url(<?php echo $img['full']; ?>);"></div>
